@@ -11,5 +11,11 @@ describe('Main', () => {
     .toBeInTheDocument();
 
     expect(container.firstChild).toMatchSnapshot();
-  })
+  });
+
+  it('should render color correctly', () => {
+      const { container } = render(<Main />);
+
+      expect(container.firstChild).toHaveStyle({ backgroundColor: '#06092b' });
+  });
 });
